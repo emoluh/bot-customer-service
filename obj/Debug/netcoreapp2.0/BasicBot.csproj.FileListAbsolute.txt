@@ -1,0 +1,12 @@
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\CustomService.bot
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\BasicBot.deps.json
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\BasicBot.runtimeconfig.json
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\BasicBot.runtimeconfig.dev.json
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\BasicBot.dll
+C:\Ressources\Interviews\CustomService\bin\Debug\netcoreapp2.0\BasicBot.pdb
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.csprojAssemblyReference.cache
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.csproj.CoreCompileInputs.cache
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.AssemblyInfoInputs.cache
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.AssemblyInfo.cs
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.dll
+C:\Ressources\Interviews\CustomService\obj\Debug\netcoreapp2.0\BasicBot.pdb
