@@ -1,4 +1,6 @@
-# Basic Bot template
+# bot-customer-service
+This is a sample description.
+
 This bot has been created using [Microsoft Bot Framework](https://dev.botframework.com),
 - Use [LUIS](https://luis.ai) to implement core AI capabilities
 - Implement a multi-turn conversation using Dialogs
