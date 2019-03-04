@@ -1,4 +1,30 @@
-*.dll
-*.pdb
-
+#Ignore thumbnails created by Windows
+Thumbs.db
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+#Ignore files built by Visual Studio
+bin
+project.lock.json
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.sbr
+obj/
+[Rr]elease*/
+# Visual Studio 2015
 .vs/
+node_modules
