@@ -6,7 +6,7 @@ Thumbs.db
 *.userosscache
 *.sln.docstates
 #Ignore files built by Visual Studio
-#bin
+bin
 project.lock.json
 *.user
 *.aps
@@ -20,10 +20,10 @@ project.lock.json
 *.cache
 *.ilk
 *.log
-#[Bb]in
+[Bb]in
 [Dd]ebug*/
 *.sbr
-#obj/
+obj/
 [Rr]elease*/
 # Visual Studio 2015
 .vs/
