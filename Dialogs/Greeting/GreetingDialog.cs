@@ -51,9 +51,11 @@ namespace Microsoft.BotBuilderSamples
             var waterfallSteps = new WaterfallStep[]
             {
                     InitializeStateStepAsync,
+                    DisplayIntroductionStateStepAsync,
                     PromptForNameStepAsync,
                     PromptForCityStepAsync,
                     DisplayGreetingStateStepAsync,
+                    PromptForHelpStepAsync,
             };
             AddDialog(new WaterfallDialog(ProfileDialog, waterfallSteps));
             AddDialog(new TextPrompt(NamePrompt, ValidateName));
@@ -80,6 +82,16 @@ namespace Microsoft.BotBuilderSamples
 
             return await stepContext.NextAsync();
         }
+
+        private async Task<DialogTurnResult> DisplayIntroductionStateStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+
+            var context = stepContext.Context;
+            await context.SendActivityAsync($"Hi I'm John Bot");
+
+            return await stepContext.NextAsync();
+        }
+
 
         private async Task<DialogTurnResult> PromptForNameStepAsync(
                                                 WaterfallStepContext stepContext,
@@ -158,9 +170,21 @@ namespace Microsoft.BotBuilderSamples
                 // capitalize and set city
                 greetingState.City = char.ToUpper(lowerCaseCity[0]) + lowerCaseCity.Substring(1);
                 await UserProfileAccessor.SetAsync(stepContext.Context, greetingState);
+                return await GreetUser(stepContext);
+            }
+            else
+            {
+                return await stepContext.NextAsync();
             }
 
-            return await GreetUser(stepContext);
+        }
+
+
+        private async Task<DialogTurnResult> PromptForHelpStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var context = stepContext.Context;
+
+            return await HelpUser(stepContext);
         }
 
         /// <summary>
@@ -217,6 +241,13 @@ namespace Microsoft.BotBuilderSamples
 
             // Display their profile information and end dialog.
             await context.SendActivityAsync($"Hi {greetingState.Name}, from {greetingState.City}, nice to meet you!");
+            return await stepContext.NextAsync();
+        }
+
+        private async Task<DialogTurnResult> HelpUser(WaterfallStepContext stepContext)
+        {
+            var context = stepContext.Context;
+            await context.SendActivityAsync($"How can I help you today?");
             return await stepContext.EndDialogAsync();
         }
     }
